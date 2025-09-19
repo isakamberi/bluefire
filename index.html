@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueFire - Full-Stack Developer</title>
+    <meta name="description" content="Professional full-stack developer from Kosovo creating exceptional digital experiences">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="a0333935-8d9d-4a24-901c-6ac1b03fe95d.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/logo-loop.css">
+    <link rel="stylesheet" href="css/particles.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+</head>
+<body>
+    <!-- Electron Autoclicker App Setup Instructions -->
+    <!--
+    1. Open terminal in this folder.
+    2. Run: npm init -y
+    3. Run: npm install electron robotjs
+    4. Add this to package.json scripts:
+       "start": "electron ."
+    5. Place main.js, index.html, and renderer.js in this folder.
+    6. Run: npm start
+    -->
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo">
+                    <img src="a0333935-8d9d-4a24-901c-6ac1b03fe95d.png" alt="BlueFire Logo" class="logo-img">
+                    <span>BlueFire</span>
+                </a>
+                <div class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#services">My Services</a></li>
+                    <li><a href="#portfolio">My Work</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact" class="btn btn-primary">Get in Touch</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section with Blue Fire Particle Background -->
+    <section class="hero" id="home" 
+             data-click-spark 
+             data-spark-color="rgba(0, 168, 255, 0.8)"
+             data-spark-size="10"
+             data-spark-radius="40"
+             data-spark-count="15"
+             data-duration="800"
+             data-easing="cubic-bezier(0.4, 0, 0.2, 1)"
+             data-extra-scale="1.5"
+             data-particles
+             data-particle-colors="#00a8ff,#0088ff,#0066ff,#00d4ff,#0099ff"
+             data-particle-count="250"
+             data-particle-spread="20"
+             data-speed="0.4"
+             data-base-size="120"
+             data-size-randomness="1.2"
+             data-hover-factor="1.5"
+             data-particle-base-size="60"
+             data-move-particles-on-hover="false"
+             data-alpha-particles="true"
+             data-disable-rotation="false">
+        <div class="particles-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Isa Kamberi</span></h1>
+                <h2>Full-Stack Developer</h2>
+                <p>I build exceptional digital experiences that make an impact</p>
+                <div class="hero-buttons">
+                    <a href="#work" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Services</h2>
+                <p>Comprehensive solutions for your digital presence</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites built with the latest technologies for optimal performance and user experience.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Beautiful, intuitive interfaces that engage users and drive conversions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Responsive</h3>
+                    <p>Websites that look and work perfectly on all devices and screen sizes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Work</h2>
+                <p>Explore my latest projects</p>
+            </div>
+            <div class="portfolio-grid">
+                <!-- Portfolio items will be added dynamically via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Me</h2>
+                    <h3>Hi, I'm Isa Kamberi (aka) BlueFire</h3>
+                    <p>I'm a passionate full-stack developer from Kosovo, dedicated to crafting exceptional digital experiences through clean, efficient code and innovative solutions.</p>
+                    
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <h4>My Journey</h4>
+                            <p>My coding journey began when I discovered the power of turning ideas into reality through programming. Since then, I've been on an exciting path of continuous learning and growth in the ever-evolving world of web development.</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h4>Technical Expertise</h4>
+                            <p>With expertise in both front-end and back-end technologies, I create seamless, responsive, and user-friendly applications. I'm proficient in modern frameworks and always stay updated with the latest industry trends.</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h4>My Philosophy</h4>
+                            <p>I believe in writing clean, maintainable code that not only solves problems but also tells a story. Every line of code I write is a reflection of my commitment to quality and attention to detail.</p>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <h4>Beyond Coding</h4>
+                            <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or sharing my knowledge with the developer community. I'm passionate about mentoring aspiring developers and helping them grow in their careers.</p>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                </div>
+                <div class="about-image">
+                    <div class="profile-card">
+                        <div class="profile-image">
+                            <img src="image.png" alt="Isa Kamberi - Full-Stack Developer" class="profile-pic">
+                        </div>
+                        <div class="profile-details">
+                            <h3>Isa Kamberi</h3>
+                            <p class="title">Full-Stack Developer</p>
+                            <p class="location"><i class="fas fa-map-marker-alt"></i> Kosovo</p>
+                            <div class="skills">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="logo-loop-section">
+        <div class="logo-loop" data-speed="1.5" data-pause-on-hover="true">
+            <div class="logo-loop__container">
+                <div class="logo-loop__header">
+                    <h2>Technologies I Work With</h2>
+                    <p>Here are some of the technologies I'm experienced with</p>
+                </div>
+                <div class="logo-loop__track">
+                    <div class="logo-loop__item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    </div>
+                    <div class="logo-loop__item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    </div>
+                    <div class="logo-loop__item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    </div>
+                    <div class="logo-loop__item">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to start your next project? Let's talk!</p>
+            </div>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder="Your Email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" rows="5" placeholder="Your Message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <h3>BlueFire</h3>
+                    <p>Creating digital experiences that make an impact.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">My Services</a></li>
+                        <li><a href="#portfolio">My Work</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Me</h4>
+                    <p><i class="fas fa-envelope"></i> info@bluefire.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 BlueFire. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-conditions.html">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script src="js/logo-loop.js"></script>
+    <script src="js/click-spark.js"></script>
+    <script src="js/particles.js"></script>
+    <script src="js/hero-animations.js"></script>
+</body>
+</html>

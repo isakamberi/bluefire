@@ -1,0 +1,88 @@
+.logo-loop {
+  position: relative;
+  overflow: hidden;
+  padding: 60px 0;
+  background-color: var(--bg-light);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.logo-loop__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo-loop__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-loop__header h2 {
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.logo-loop__track {
+  display: flex;
+  align-items: center;
+  will-change: transform;
+  user-select: none;
+  gap: 40px;
+  padding: 20px 0;
+  white-space: nowrap;
+}
+
+.logo-loop__item {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.logo-loop__item img {
+  height: 50px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.1));
+  opacity: 0.9;
+}
+
+.logo-loop__item:hover img {
+  transform: scale(1.15) translateY(-3px);
+  opacity: 1;
+  filter: drop-shadow(0 5px 10px rgba(0,0,0,0.15));
+}
+
+/* Removed fade elements as we're using CSS mask for better performance */
+
+@media (max-width: 768px) {
+  .logo-loop {
+    padding: 30px 0;
+  }
+  
+  .logo-loop__item img {
+    height: 35px;
+  }
+  
+  .logo-loop__fade {
+    width: 30px;
+  }
+}
