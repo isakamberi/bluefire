@@ -114,66 +114,34 @@ if (contactForm) {
     });
 }
 
-// Portfolio Items (Sample Data - Replace with your actual projects)
-const portfolioItems = [
-    {
-        title: 'Project One',
-        category: 'Web Design',
-        image: 'https://via.placeholder.com/600x400/4361ee/ffffff?text=Project+One',
-        demo: '#',
-        code: '#'
-    },
-    {
-        title: 'Project Two',
-        category: 'Web Development',
-        image: 'https://via.placeholder.com/600x400/3f37c9/ffffff?text=Project+Two',
-        demo: '#',
-        code: '#'
-    },
-    {
-        title: 'Project Three',
-        category: 'UI/UX',
-        image: 'https://via.placeholder.com/600x400/4cc9f0/ffffff?text=Project+Three',
-        demo: '#',
-        code: '#'
-    }
-];
-
-// Render Portfolio Items
-function renderPortfolio() {
-    const portfolioGrid = document.querySelector('.portfolio-grid');
-    
-    if (!portfolioGrid) return;
-    
-    portfolioItems.forEach((item, index) => {
-        const portfolioItem = document.createElement('div');
-        portfolioItem.className = 'portfolio-item fade-in-up';
-        portfolioItem.style.animationDelay = `${index * 0.1}s`;
-        
-        portfolioItem.innerHTML = `
-            <div class="portfolio-img">
-                <img src="${item.image}" alt="${item.title}">
-                <div class="portfolio-overlay">
-                    <h3>${item.title}</h3>
-                    <p>${item.category}</p>
-                    <div class="portfolio-links">
-                        <a href="${item.demo}" title="View Demo" target="_blank"><i class="fas fa-link"></i></a>
-                        <a href="${item.code}" title="View Code" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-            </div>
-        `;
-        
-        portfolioGrid.appendChild(portfolioItem);
-    });
-}
-
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
-    renderPortfolio();
-    
+    // Tab Functionality
+    function initTabs() {
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabPanes = document.querySelectorAll('.tab-pane');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons and panes
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+                
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                // Show corresponding tab content
+                const tabId = button.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+    }
+
+    // Initialize tabs when DOM is loaded
+    initTabs();
+
     // Add animation on scroll
-    const animateOnScroll = () => {
+    function animateOnScroll() {
         const elements = document.querySelectorAll('.fade-in-up');
         
         elements.forEach(element => {
